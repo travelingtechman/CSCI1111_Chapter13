@@ -1,0 +1,37 @@
+package chapter_13;
+
+import java.util.Scanner;
+
+public class Exercise13_1 {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print(triangle1.getString());
+		
+		System.out.println("side1 of a triangle: ");
+	    	triangle1.setSide1(input.nextDouble());
+	    System.out.println("side2 of a triangle: ");
+	    	triangle1.setSide2(input.nextDouble());    
+	    System.out.println("side3 of a triangle: ");
+	    	triangle1.setSide3(input.nextDouble()); 
+	    	
+		System.out.println("Please enter a color");
+			String color = input.next();
+			triangle1.setColor(color);
+			
+		System.out.println("Is the triangle filled? input a 0 for not filled, and a 1 for is filled");
+			int fillInt = input.nextInt();
+		if(fillInt == 0) {
+			boolean fill = false;
+			triangle1.setFilled(fill);
+		} else if(fillInt == 1) {
+			boolean fill = true;
+			triangle1.setFilled(fill);
+		}
+		System.out.println(triangle1.getString());
+		
+	}
+
+}
